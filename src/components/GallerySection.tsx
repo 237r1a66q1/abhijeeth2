@@ -232,7 +232,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                 {photo.url ? (
                   <>
                     <img
-                      src={photo.url}
+                      src={encodeURI(photo.url)}
                       alt={photo.caption}
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"

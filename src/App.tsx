@@ -17,8 +17,8 @@ import { BirthdayWebsiteContent } from './types';
 import { RotateCcw, Check, Sparkles } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
-const STORAGE_KEY = 'bestie_active_user_edits_v3';
-const FINGERPRINT_KEY = 'bestie_content_file_fingerprint_v3';
+const STORAGE_KEY = 'bestie_active_user_edits_v4';
+const FINGERPRINT_KEY = 'bestie_content_file_fingerprint_v4';
 
 export default function App() {
   const [isEditMode, setIsEditMode] = useState(false);

@@ -65,11 +65,11 @@ export const BIRTHDAY_CONTENT: BirthdayWebsiteContent = {
     uploadHint: '',
     addMemoryButtonText: '',
 
-    // You can paste image URLs here or upload them directly on the website
+    // Original uploaded WhatsApp photographs mapped to the 4 memory cards
     photos: [
       {
         id: 'photo-1',
-        url: '/images/chai-maggi.jpg', // Chai & Maggi Time ☕
+        url: '/images/WhatsApp Image 2026-11-05 at 9.29.11 PM.jpeg', // Chai & Maggi Time ☕ (Day 1 / First photo)
         caption: 'Ee pic gurthundha ra?,idhi mana first photo,manam appudh just frndssss ',
         rotation: -2,
         tapeColor: 'pink',
@@ -78,7 +78,7 @@ export const BIRTHDAY_CONTENT: BirthdayWebsiteContent = {
       },
       {
         id: 'photo-2',
-        url: '/images/navvulu.jpg', // Non-stop Navvulu 😂
+        url: '/images/WhatsApp Image 2026-11-05 at 10.27.25 PM.jpeg', // Non-stop Navvulu 😂 (Childhood photo)
         caption: 'ee cute boyy evvaruu',
         rotation: 3,
         tapeColor: 'blue',
@@ -87,7 +87,7 @@ export const BIRTHDAY_CONTENT: BirthdayWebsiteContent = {
       },
       {
         id: 'photo-3',
-        url: '/images/car-rides.jpg', // Vibe & Car Rides 🎧
+        url: '/images/WhatsApp Image 2026-11-05 at 7.41.15 PM (1).jpeg', // Vibe & Car Rides 🎧 (Beach trip moments)
         caption: 'ee okka photo venakala enni kathal enni lollilu unnay kadhaaa',
         rotation: -3,
         tapeColor: 'lavender',
@@ -96,7 +96,7 @@ export const BIRTHDAY_CONTENT: BirthdayWebsiteContent = {
       },
       {
         id: 'photo-4',
-        url: '/images/bestie-bond.jpg', // Evergreen Bestie Bond ❤️
+        url: '/images/WhatsApp Image 2026-11-05 at 7.41.15 PM (2).jpeg', // Evergreen Bestie Bond ❤️ (Besties together)
         caption: 'Enni fights aynaa kanii manakii full cute memories unnay  ',
         rotation: 2,
         tapeColor: 'cream',
