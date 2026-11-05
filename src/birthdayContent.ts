@@ -69,7 +69,7 @@ export const BIRTHDAY_CONTENT: BirthdayWebsiteContent = {
     photos: [
       {
         id: 'photo-1',
-        url: '', // Leave empty for cute scrapbook placeholder or add your image URL
+        url: '/images/chai-maggi.jpg', // Chai & Maggi Time ☕
         caption: 'Ee pic gurthundha ra?,idhi mana first photo,manam appudh just frndssss ',
         rotation: -2,
         tapeColor: 'pink',
@@ -78,7 +78,7 @@ export const BIRTHDAY_CONTENT: BirthdayWebsiteContent = {
       },
       {
         id: 'photo-2',
-        url: '',
+        url: '/images/navvulu.jpg', // Non-stop Navvulu 😂
         caption: 'ee cute boyy evvaruu',
         rotation: 3,
         tapeColor: 'blue',
@@ -87,7 +87,7 @@ export const BIRTHDAY_CONTENT: BirthdayWebsiteContent = {
       },
       {
         id: 'photo-3',
-        url: '',
+        url: '/images/car-rides.jpg', // Vibe & Car Rides 🎧
         caption: 'ee okka photo venakala enni kathal enni lollilu unnay kadhaaa',
         rotation: -3,
         tapeColor: 'lavender',
@@ -96,7 +96,7 @@ export const BIRTHDAY_CONTENT: BirthdayWebsiteContent = {
       },
       {
         id: 'photo-4',
-        url: '',
+        url: '/images/bestie-bond.jpg', // Evergreen Bestie Bond ❤️
         caption: 'Enni fights aynaa kanii manakii full cute memories unnay  ',
         rotation: 2,
         tapeColor: 'cream',
@@ -248,6 +248,7 @@ export const BIRTHDAY_CONTENT: BirthdayWebsiteContent = {
     playingText: 'Paata Vintunvaa! 🎶',
     noAutoplayNote: '(No autoplay - nee permission tho ne!)',
     uploadButtonText: 'MP3 Upload Cheyyi 🎵',
+    audioSrc: '/music/birthday-song.mp3',
   },
 
   // --------------------------------------------------------------------------

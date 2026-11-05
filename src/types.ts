@@ -105,6 +105,7 @@ export interface BirthdayWebsiteContent {
     playingText: string;
     noAutoplayNote: string;
     uploadButtonText: string;
+    audioSrc?: string;
   };
 
   letter: {

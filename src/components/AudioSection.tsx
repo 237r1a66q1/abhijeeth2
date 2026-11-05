@@ -19,7 +19,9 @@ export const AudioSection: React.FC<AudioSectionProps> = ({
   onEnterEditMode,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [audioSrc, setAudioSrc] = useState<string | null>(null);
+  const [audioSrc, setAudioSrc] = useState<string | null>(
+    songContent.audioSrc || '/music/birthday-song.mp3'
+  );
   const [fileName, setFileName] = useState<string>(songContent.defaultTrackTitle);
   const [isSynthPlaying, setIsSynthPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -30,9 +32,16 @@ export const AudioSection: React.FC<AudioSectionProps> = ({
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
+  // Sync with content file if changed
+  useEffect(() => {
+    if (songContent.audioSrc && songContent.audioSrc !== audioSrc) {
+      setAudioSrc(songContent.audioSrc);
+    }
+  }, [songContent.audioSrc]);
+
   // Sync track name with content file
   useEffect(() => {
-    if (!audioSrc) {
+    if (!audioSrc || audioSrc === '/music/birthday-song.mp3') {
       setFileName(songContent.defaultTrackTitle);
     }
   }, [songContent.defaultTrackTitle, audioSrc]);
@@ -75,8 +84,21 @@ export const AudioSection: React.FC<AudioSectionProps> = ({
         audioRef.current.pause();
         setIsPlaying(false);
       } else {
-        audioRef.current.play();
-        setIsPlaying(true);
+        const playPromise = audioRef.current.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              setIsPlaying(true);
+            })
+            .catch((err) => {
+              console.warn('Audio playback issue:', err);
+              if (!isSynthPlaying) {
+                melodySynth.start();
+                setIsSynthPlaying(true);
+                setIsPlaying(true);
+              }
+            });
+        }
       }
     } else {
       // Use synthesized melodic player
@@ -121,7 +143,7 @@ export const AudioSection: React.FC<AudioSectionProps> = ({
       melodySynth.stop();
       setIsSynthPlaying(false);
     }
-    setAudioSrc(null);
+    setAudioSrc(songContent.audioSrc || '/music/birthday-song.mp3');
     setFileName(songContent.defaultTrackTitle);
     setIsPlaying(false);
     setCurrentTime(0);

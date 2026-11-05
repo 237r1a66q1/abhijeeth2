@@ -224,10 +224,10 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                 />
               </div>
 
-              {/* Photo Frame Container */}
+              {/* Photo Frame Container with dashed border and rounded corners */}
               <div
                 onClick={() => fileInputRefs.current[photo.id]?.click()}
-                className="w-full aspect-[4/4.5] bg-slate-100 rounded-xs overflow-hidden relative shadow-inner mb-3 flex items-center justify-center cursor-pointer"
+                className="w-full aspect-[4/4.5] bg-slate-50 border-2 border-dashed border-pink-200/90 rounded-xl overflow-hidden relative shadow-inner mb-3 flex items-center justify-center cursor-pointer group-hover:border-pink-400 transition-colors"
               >
                 {photo.url ? (
                   <>
@@ -235,9 +235,9 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                       src={photo.url}
                       alt={photo.caption}
                       referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5 backdrop-blur-xs">
+                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5 backdrop-blur-xs rounded-lg">
                       <Upload className="w-4 h-4" />
                       <span>Photo Marchu 📸</span>
                     </div>
