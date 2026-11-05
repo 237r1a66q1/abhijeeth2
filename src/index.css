@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --font-hand: "Patrick Hand", cursive;
+  --font-cursive: "Caveat", cursive;
+  --font-sans: "Quicksand", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans), sans-serif;
+  background-color: #FFFDF9;
+  color: #334155;
+  overflow-x: hidden;
+}
+
+/* Washi tape accents */
+.washi-tape {
+  position: absolute;
+  height: 24px;
+  opacity: 0.85;
+  background-size: 20px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(2px);
+  z-index: 10;
+}
+
+.washi-tape-pink {
+  background-color: rgba(251, 207, 232, 0.9);
+  border-left: 2px dashed rgba(244, 114, 182, 0.4);
+  border-right: 2px dashed rgba(244, 114, 182, 0.4);
+}
+
+.washi-tape-blue {
+  background-color: rgba(186, 230, 253, 0.9);
+  border-left: 2px dashed rgba(56, 189, 248, 0.4);
+  border-right: 2px dashed rgba(56, 189, 248, 0.4);
+}
+
+.washi-tape-lavender {
+  background-color: rgba(233, 213, 255, 0.9);
+  border-left: 2px dashed rgba(192, 132, 252, 0.4);
+  border-right: 2px dashed rgba(192, 132, 252, 0.4);
+}
+
+.washi-tape-cream {
+  background-color: rgba(254, 243, 199, 0.9);
+  border-left: 2px dashed rgba(251, 191, 36, 0.4);
+  border-right: 2px dashed rgba(251, 191, 36, 0.4);
+}
+
+/* Scrapbook polaroid shadow */
+.polaroid-card {
+  background: #FFFFFF;
+  box-shadow: 0 10px 25px -5px rgba(100, 116, 139, 0.12), 0 8px 10px -6px rgba(100, 116, 139, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.polaroid-card:hover {
+  transform: translateY(-4px) scale(1.01) rotate(0deg) !important;
+  box-shadow: 0 20px 30px -10px rgba(100, 116, 139, 0.2);
+}
+
+/* Subtle dot grid for paper aesthetic */
+.paper-pattern {
+  background-image: radial-gradient(rgba(203, 213, 225, 0.35) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFDF9;
+}
+::-webkit-scrollbar-thumb {
+  background: #FBCFE8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F472B6;
+}
